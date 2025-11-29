@@ -19,7 +19,7 @@ lnt = content_save_information[0]["latlng"][1]
 
 
 print("--ІНФОРМАЦІЯ ПРО КРАЇНУ--")
-print("Офицальное название:", content_save_information[0]["name"]["common"])
+print("Офицальное название:", content_save_information[0]["name"]["official"])
 print("Столица:", content_save_information[0]["capital"])
 print("Прапор:", content_save_information[0]["flag"])
 print("Населення", content_save_information[0]["population"], "осіб")
