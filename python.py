@@ -11,7 +11,8 @@ content_save_information_1 = content_save_1.json()
 content_save_2 = requests.get(url_2)
 content_save_information_2 = content_save_2.json()
 
-
+population = content_save_information[0]["population"]
+formated_population = f"{population:,}"
 
 
 lat = content_save_information[0]["latlng"][0]
@@ -20,9 +21,9 @@ lnt = content_save_information[0]["latlng"][1]
 
 print("--ІНФОРМАЦІЯ ПРО КРАЇНУ--")
 print("Офицальное название:", content_save_information[0]["name"]["official"])
-print("Столица:", content_save_information[0]["capital"])
+print("Столица:", content_save_information[0]["capital"][0])
 print("Прапор:", content_save_information[0]["flag"])
-print("Населення", content_save_information[0]["population"], "осіб")
+print("Населення", [formated_population], "осіб")
 print("Географічне положення", content_save_information[0]["name"]["common"], "размещенна приблизительно на ширине", lat, "и длине", lnt)
 
 
